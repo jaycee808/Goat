@@ -11,10 +11,93 @@
     <title>Goat</title>
 </head>
 <body>
-    <h1>Contact</h1>
+    <!-- Navigation bar -->
+    <nav class="navbar">
+        <div class="nav-center">
+            <!-- menu toggle -->
+            <button class="menu-toggle">
+                <i class="fa-solid fa-bars"></i>
+            </button>
 
+            <!-- menu close button -->
+            <button class="menu-close-btn">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <!-- menu links -->
+            <ul class="menu-links">
+                <li>
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li>
+                    <a href="shop.html" class="nav-link">Shop</a>
+                </li>
+                <li>
+                    <a href="about.html" class="nav-link">About</a>
+                </li>
+                <li>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+            </ul>
+
+            <!-- logo -->
+            <div class="logo"><h1>GOAT</h1></div>
+
+            <!-- Shopping Cart -->
+            <div class="shopping-cart">
+                <button class="toggle-cart">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </button>
+                <!-- Shopping Cart Overlay -->
+                <div class="cart-overlay">
+                    <aside class="cart">
+                        <button class="cart-close-btn">
+                            <i class="fa-solid fa-xmark"></i>
+                        </button>
+                    <header>
+                        <h3 class="cart-title">Your Basket</h3>
+                    </header>
+                    <!-- cart items -->
+                    <div class="cart-items">
+                        <!-- single item -->
+                        <article class="cart-item" data-id="">
+                            <!-- item info -->
+                            <div>
+                                <h4 class="cart-item-name">Amber Dusk</h4>
+                                <p class="cart-item-price">£30</p>
+                                <button class="cart-item-remove-btn">Remove</button>
+                            </div>
+                            <!-- add or decrease number of items -->
+                            <div>
+                                <button class="cart-item-increase-btn">
+                                    <i class="fa-solid fa-plus"></i>
+                                </button>
+                                    <p class="cart-item-amount">1</p>
+                                <button class="cart-item-decrease-btn">
+                                    <i class="fa-solid fa-minus"></i>
+                                </button>
+                            </div>
+                        </article>
+                    </div>
+                    <!-- footer -->
+                    <footer>
+                        <h3 class="cart-total">Total : £30</h3>
+                        <button class="cart-checkout btn">Checkout</button>
+                    </footer>
+                    </aside>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- contact page -->
+    <section>
+        <div>
+            <h2>Contact us.</h2>
+        </div>
+    </section>
 
     <!-- JavaScript -->
-    <script type="text/javascript" src="./assests/js/script.js"></script>
+    <script type="text/javascript" src="./assets/js/script.js"></script>
 </body>
 </html>

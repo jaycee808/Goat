@@ -19,6 +19,11 @@
                 <i class="fa-solid fa-bars"></i>
             </button>
 
+            <!-- menu close button -->
+            <button class="menu-close-btn">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
             <!-- menu links -->
             <ul class="menu-links">
                 <li>
@@ -38,11 +43,49 @@
             <!-- logo -->
             <div class="logo"><h1>GOAT</h1></div>
 
-            <!-- shopping cart -->
+            <!-- Shopping Cart -->
             <div class="shopping-cart">
                 <button class="toggle-cart">
                     <i class="fa-solid fa-cart-shopping"></i>
                 </button>
+                <!-- Shopping Cart Overlay -->
+                <div class="cart-overlay">
+                    <aside class="cart">
+                        <button class="cart-close-btn">
+                            <i class="fa-solid fa-xmark"></i>
+                        </button>
+                    <header>
+                        <h3 class="cart-title">Your Basket</h3>
+                    </header>
+                    <!-- cart items -->
+                    <div class="cart-items">
+                        <!-- single item -->
+                        <article class="cart-item" data-id="">
+                            <!-- item info -->
+                            <div>
+                                <h4 class="cart-item-name">Amber Dusk</h4>
+                                <p class="cart-item-price">£30</p>
+                                <button class="cart-item-remove-btn">Remove</button>
+                            </div>
+                            <!-- add or decrease number of items -->
+                            <div>
+                                <button class="cart-item-increase-btn">
+                                    <i class="fa-solid fa-plus"></i>
+                                </button>
+                                    <p class="cart-item-amount">1</p>
+                                <button class="cart-item-decrease-btn">
+                                    <i class="fa-solid fa-minus"></i>
+                                </button>
+                            </div>
+                        </article>
+                    </div>
+                    <!-- footer -->
+                    <footer>
+                        <h3 class="cart-total">Total : £30</h3>
+                        <button class="cart-checkout btn">Checkout</button>
+                    </footer>
+                    </aside>
+                </div>
             </div>
         </div>
     </nav>
