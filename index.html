@@ -11,14 +11,31 @@
     <title>Goat</title>
 </head>
 <body>
-    <!-- Navigation bar -->
+    <!-- Navigation bar-->
     <nav class="navbar">
         <div class="nav-top">
             <div class="logo"><h1>GOAT</h1></div>
             <div class="shopping-cart">
                 <button class="toggle-cart">
-                    <i class="fa-solid fa-cart-shopping"></i>
+                <i class="fa-solid fa-cart-shopping"></i>
                 </button>
+            <div class="cart-overlay">
+                <aside class="cart">
+                <button class="cart-close-btn">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+                <header>
+                    <h3 class="cart-title">Your Basket</h3>
+                </header>
+                <div class="cart-items">
+                <!-- cart items -->
+                </div>
+                <footer>
+                    <h3 class="cart-total">Total: <span id="cart-total-price">£0</span></h3>
+                    <button class="cart-checkout btn">Checkout</button>
+                </footer>
+                </aside>
+            </div>
             </div>
         </div>
         <div class="nav-bottom">
