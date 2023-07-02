@@ -152,6 +152,57 @@ function displayProducts() {
         }
 
         productDisplayDiv.innerHTML = productHTML;
+
+        // add event listeners to the "Add to Basket" buttons
+        const addToBasketBtns = document.getElementsByClassName('addToBasketBtn');
+        for (let i = 0; i < addToBasketBtns.length; i++) {
+            addToBasketBtns[i].addEventListener('click', function () {
+                const productId = this.getAttribute('data-id');
+                addToBasket(productId);
+            });
+        }
     }
+
+// Function to add product to the basket
+function addToBasket(productId) {
+    // get the product details based on the productId
+    let product;
+    for (let i = 0; i < productList.length; i++) {
+        if (productList[i].id === productId) {
+            product = productList[i];
+            break;
+        }
+    }
+
+    // if product is not found
+    if (!product) {
+        return;
+    }
+
+    // get the basket items from the local storage
+    let basketItems = JSON.parse(localStorage.getItem('basketItems')) || [];
+
+    // check if the product is already in the basket
+    const existingItem = basketItems.find((item) => item.id === productId);
+    if (existingItem) {
+      // if the product already exists in the basket, increase the quantity
+        existingItem.quantity++;
+    } else {
+      // if the product does not exist in the basket, add it
+        basketItems.push({
+            id: product.id,
+            name: product.name,
+            price: product.price,
+            quantity: 1,
+        });
+    }
+
+    // Update the basket items in the local storage
+    localStorage.setItem('basketItems', JSON.stringify(basketItems));
+}
+
+// Function to remove product from the basket
+
+// Function to calculate total price of the basket
 
 displayProducts();
