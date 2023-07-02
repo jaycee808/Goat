@@ -199,7 +199,46 @@ function addToBasket(productId) {
 
     // Update the basket items in the local storage
     localStorage.setItem('basketItems', JSON.stringify(basketItems));
+
+    // Refresh the shopping cart
+    displayShoppingCart();
 }
+
+// Function to display the items in the shopping cart
+function displayShoppingCart() {
+    const cartItemsDiv = document.querySelector('.cart-items');
+
+    // retrieve the basket items from local storage
+    let basketItems = JSON.parse(localStorage.getItem('basketItems')) || [];
+
+    let cartItemsHTML = '';
+    for (let i = 0; i < basketItems.length; i++) {
+        const item = basketItems[i];
+
+        // display the items information in html
+        cartItemsHTML += `
+            <article class="cart-item" data-id="${item.id}">
+                <div>
+                    <h4 class="cart-item-name">${item.name}</h4>
+                    <p class="cart-item-price">£${item.price}</p>
+                    <button class="cart-item-remove-btn">Remove</button>
+                </div>
+                <div>
+                    <button class="cart-item-increase-btn">
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
+                    <p class="cart-item-amount">${item.quantity}</p>
+                    <button class="cart-item-decrease-btn">
+                        <i class="fa-solid fa-minus"></i>
+                    </button>
+                </div>
+            </article>
+        `;
+    }
+
+    cartItemsDiv.innerHTML = cartItemsHTML;
+}
+
 
 // Function to remove product from the basket
 
