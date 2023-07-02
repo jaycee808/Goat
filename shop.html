@@ -39,7 +39,7 @@
                     <a href="contact.html" class="nav-link">Contact</a>
                 </li>
             </ul>
-
+            <button></button>
             <!-- logo -->
             <div class="logo"><h1>GOAT</h1></div>
 
@@ -60,14 +60,12 @@
                     <!-- cart items -->
                     <div class="cart-items">
                         <!-- single item -->
-                        <article class="cart-item" data-id="">
-                            <!-- item info -->
+                        <!-- <article class="cart-item" data-id="">
                             <div>
                                 <h4 class="cart-item-name">Amber Dusk</h4>
                                 <p class="cart-item-price">£30</p>
                                 <button class="cart-item-remove-btn">Remove</button>
                             </div>
-                            <!-- add or decrease number of items -->
                             <div>
                                 <button class="cart-item-increase-btn">
                                     <i class="fa-solid fa-plus"></i>
@@ -77,11 +75,11 @@
                                     <i class="fa-solid fa-minus"></i>
                                 </button>
                             </div>
-                        </article>
+                        </article> -->
                     </div>
                     <!-- footer -->
                     <footer>
-                        <h3 class="cart-total">Total : £30</h3>
+                        <h3 class="cart-total">Total: <span id="cart-total-price">£0</span></h3>
                         <button class="cart-checkout btn">Checkout</button>
                     </footer>
                     </aside>
@@ -90,43 +88,11 @@
         </div>
     </nav>
 
-    <!-- shopping page -->
+    <!-- cleanser page -->
     <section>
         <div>
-            <h2>browse our products</h2>
-        </div>
-        <div class="productDisplay">
-            <div class="section-skincare">
-                <h3>
-                    <a href="skincare.html">SKINCARE</a>
-                </h3>
-                <ul>
-                    <li>
-                        <a href="cleanser.html">CLEANSER</a>
-                    </li>
-                    <li>
-                        <a href="exfoliator.html">EXFOLIATOR</a>
-                    </li>
-                    <li>
-                        <a href="moisturiser.html">MOISTURISER</a>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="section-fragrance">
-                <h3>
-                    <a href="fragrance.html">FRAGRANCE</a>
-                </h3>
-                <ul>
-                    <li>
-                        <a href="day-collection.html">DAY</a>
-                    </li>
-                    <li>
-                        <a href="night-collection.html">NIGHT</a>
-                    </li>
-                </ul>
-            </div>
-
+            <h2>Browse Products</h2>
+                <div id="product-display"></div> 
         </div>
     </section>
 
