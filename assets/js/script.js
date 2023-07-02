@@ -122,6 +122,8 @@ let productList = [
     },
 ];
 
+displayShoppingCart();
+
 // Function to display products dynamically
 function displayProducts() {
     const productDisplayDiv = document.getElementById('product-display');
@@ -260,4 +262,3 @@ function removeCartItem(itemId) {
 // Function to calculate total price of the basket
 
 displayProducts();
-displayShoppingCart();
