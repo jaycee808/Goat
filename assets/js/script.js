@@ -237,6 +237,15 @@ function displayShoppingCart() {
     }
 
     cartItemsDiv.innerHTML = cartItemsHTML;
+
+    // add event listeners to the remove buttons
+    const removeButtons = document.getElementsByClassName('cart-item-remove-btn');
+        for (let i = 0; i < removeButtons.length; i++) {
+            removeButtons[i].addEventListener('click', function () {
+                const itemId = this.parentNode.parentNode.getAttribute('data-id');
+                removeCartItem(itemId);
+            });
+    }
 }
 
 // Function to remove product from the basket
