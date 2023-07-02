@@ -239,9 +239,27 @@ function displayShoppingCart() {
     cartItemsDiv.innerHTML = cartItemsHTML;
 }
 
-
 // Function to remove product from the basket
+function removeCartItem(itemId) {
+    // get the basket items from the local storage
+    let basketItems = JSON.parse(localStorage.getItem('basketItems')) || [];
+
+    // find the index of the item to remove
+    const itemIndex = basketItems.findIndex((item) => item.id === itemId);
+
+    if (itemIndex !== -1) {
+        // remove the item from the basket items array
+        basketItems.splice(itemIndex, 1);
+
+        // update the basket items in the local storage
+        localStorage.setItem('basketItems', JSON.stringify(basketItems));
+
+        // refresh the shopping cart
+        displayShoppingCart();
+    }
+}
 
 // Function to calculate total price of the basket
 
 displayProducts();
+displayShoppingCart();
