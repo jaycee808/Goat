@@ -1,32 +1,3 @@
-/* Event Listener to toggle navigation menu */ 
-document.addEventListener('DOMContentLoaded', function () {
-    const menuToggle = document.querySelector('.menu-toggle');
-    const menuLinks = document.querySelector('.menu-links');
-    const menuCloseBtn = document.querySelector('.menu-close-btn');
-    const cartToggle = document.querySelector('.toggle-cart');
-    const cartOverlay = document.querySelector('.cart-overlay');
-
-    menuToggle.addEventListener('click', () => {
-        menuLinks.classList.toggle('show');
-        menuLinks.classList.toggle('grid');
-        menuCloseBtn.style.display = 'block'; // Display the close button when menu links are shown
-    });
-
-    menuCloseBtn.addEventListener('click', () => {
-        menuLinks.classList.remove('show');
-        menuCloseBtn.style.display = 'none'; // Hide the close button when menu links are hidden
-    });
-
-    cartToggle.addEventListener('click', () => {
-        cartOverlay.classList.toggle('show');
-    });
-
-    const cartCloseBtn = document.querySelector('.cart-close-btn');
-    cartCloseBtn.addEventListener('click', () => {
-        cartOverlay.classList.remove('show');
-    });
-});
-
 // product lists //
 
 let cleansers = [
@@ -145,25 +116,3 @@ let colognes = [
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     },
 ];
-
-// Function to display cleanser properties dynamically
-function displayCleanserProperties() {
-    const cleanserPropertiesDiv = document.getElementById('cleanser-properties');
-
-    let cleanserHTML = '';
-        for (let i = 0; i < cleansers.length; i++) {
-        const cleanser = cleansers[i];
-
-        cleanserHTML += `
-            <div>
-                <h3>${cleanser.name}</h3>
-                <p>Price: £${cleanser.price}</p>
-                <p>Description: ${cleanser.description}</p>
-            </div>
-            `;
-        }
-
-        cleanserPropertiesDiv.innerHTML = cleanserHTML;
-    }
-
-    displayCleanserProperties();
