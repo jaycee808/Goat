@@ -123,6 +123,7 @@ let productList = [
 ];
 
 displayShoppingCart();
+calculateTotalPrice();
 
 // Function to display products dynamically
 function displayProducts() {
@@ -193,6 +194,9 @@ function addToBasket(productId) {
 
     // Refresh the shopping cart
     displayShoppingCart();
+
+    // Update the total price of the items in the shopping cart
+    updateTotalPrice();
 }
 
 // Function to display the items in the shopping cart
@@ -256,9 +260,36 @@ function removeCartItem(itemId) {
 
         // refresh the shopping cart
         displayShoppingCart();
+        
+        // update the price of the shopping cart when an item is removed
+        updateTotalPrice();
     }
 }
 
 // Function to calculate total price of the basket
+function calculateTotalPrice() {
+    const cartItems = document.getElementsByClassName('cart-item');
+    let totalPrice = 0;
 
+    for (let i = 0; i < cartItems.length; i++) {
+        const cartItem = cartItems[i];
+        const priceElement = cartItem.querySelector('.cart-item-price');
+        const price = parseFloat(priceElement.innerText.replace('£', ''));
+        const quantityElement = cartItem.querySelector('.cart-item-amount');
+        const quantity = parseInt(quantityElement.innerText);
+        totalPrice += price * quantity;
+    }
+
+    return totalPrice;
+}
+
+// Function to update the total price in the shopping cart
+function updateTotalPrice() {
+    const cartTotalElement = document.querySelector('.cart-total');
+    const totalPrice = calculateTotalPrice();
+    cartTotalElement.innerText = `Total: £${totalPrice.toFixed(2)}`;
+}
+
+updateTotalPrice();
 displayProducts();
+
