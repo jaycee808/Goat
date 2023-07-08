@@ -287,11 +287,26 @@ function removeCartItem(itemId) {
 
 // Function to increase quantity of an item in the shopping cart
 function increaseQuantity(productId) {
+    let basketItems = JSON.parse(localStorage.getItem('basketItems')) || [];
+    let updatedBasketItems = [];
 
+    for (let i = 0; i < basketItems.length; i++) {
+        const item = basketItems[i];
+
+        if (item.id === productId) {
+            item.quantity++;
+        }
+
+        updatedBasketItems.push(item);
+    }
+
+    localStorage.setItem('basketItems', JSON.stringify(updatedBasketItems));
+    displayShoppingCart();
+    updateTotalPrice();
 }
 
 // Function to decrease quantity of an item in the shopping cart
-function increaseQuantity(productId) {
+function decreaseQuantity(productId) {
 
 }
 
