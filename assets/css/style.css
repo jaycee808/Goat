@@ -52,10 +52,18 @@ p {
     display: flex;
 }
 
-.logo {
+.logo, 
+.logo-link {
+    font-size: 3rem;
+    font-weight: bold;
     text-align: center;
     margin: auto;
     font-family: "Lexend Peta", sans-serif;
+}
+
+.logo-link {
+    text-decoration: none;
+    color: inherit;
 }
 
 .shopping-cart {
@@ -218,6 +226,19 @@ p {
 /* global page styles */
 
 .category-heading {
+    font-family: "Lexend Peta", sans-serif;
+    text-transform: uppercase;
+}
+
+/* home page styles */
+
+.shop-btn {
+    background: #FFF;
+    padding: 0.5rem;
+    border-radius: 6px;
+    border: 1px solid #000;
+    color: #000;
+    cursor: pointer;
     font-family: "Lexend Peta", sans-serif;
     text-transform: uppercase;
 }
