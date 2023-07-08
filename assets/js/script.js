@@ -136,14 +136,14 @@ function displayProducts() {
         
         const category = productList[i];
 
-    productHTML += `<h2>${category.category}</h2>`;
+    productHTML += `<h2>${category.category.toUpperCase()}</h2>`;
         for (let p = 0; p < category.products.length; p++) {
         
         const product = category.products[p];
     
     productHTML += `
         <div>
-            <h3>${product.name}</h3>
+            <h3>${product.name.toUpperCase()}</h3>
             <p>Price: £${product.price}</p>
             <p>Description: ${product.description}</p>
             <button class="addToBasketBtn" data-id="${product.id}">Add to Basket</button>
