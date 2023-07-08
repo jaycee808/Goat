@@ -307,7 +307,24 @@ function increaseQuantity(productId) {
 
 // Function to decrease quantity of an item in the shopping cart
 function decreaseQuantity(productId) {
+    let basketItems = JSON.parse(localStorage.getItem('basketItems')) || [];
+    let updatedBasketItems = [];
 
+    for (let i = 0; i < basketItems.length; i++) {
+        const item = basketItems[i];
+
+        if (item.id === productId) {
+            item.quantity--;
+        } else {
+            continue;
+        }
+
+        updatedBasketItems.push(item);
+    }
+
+    localStorage.setItem('basketItems', JSON.stringify(updatedBasketItems));
+    displayShoppingCart();
+    updateTotalPrice();
 }
 
 // Function to calculate total price of the basket
