@@ -133,44 +133,51 @@ function displayProducts() {
 
     let productHTML = '';
         for (let i = 0; i < productList.length; i++) {
-        const product = productList[i];
+        
+        const category = productList[i];
 
-        productHTML += `
-            <div>
-                <h3>${product.name}</h3>
-                <p>Price: £${product.price}</p>
-                <p>Description: ${product.description}</p>
-                <button class="addToBasketBtn" data-id="${product.id}">Add to Basket</button>
-            </div>
-            `;
-        }
+    productHTML += `<h2>${category.category}</h2>`;
+        for (let p = 0; p < category.products.length; p++) {
+        
+        const product = category.products[p];
+    
+    productHTML += `
+        <div>
+            <h3>${product.name}</h3>
+            <p>Price: £${product.price}</p>
+            <p>Description: ${product.description}</p>
+            <button class="addToBasketBtn" data-id="${product.id}">Add to Basket</button>
+        </div>
+        `;
+    }
+}
 
-        productDisplayDiv.innerHTML = productHTML;
+    productDisplayDiv.innerHTML = productHTML;
 
-        // add event listeners to the "Add to Basket" buttons
-        const addToBasketBtns = document.getElementsByClassName('addToBasketBtn');
+    // add event listeners to the "Add to Basket" buttons
+    const addToBasketBtns = document.getElementsByClassName('addToBasketBtn');
         for (let i = 0; i < addToBasketBtns.length; i++) {
             addToBasketBtns[i].addEventListener('click', function () {
-                const productId = this.getAttribute('data-id');
-                addToBasket(productId);
-            });
-        }
+            const productId = this.getAttribute('data-id');
+            addToBasket(productId);
+        });
     }
+}
 
 // Function to add product to the basket
 function addToBasket(productId) {
     // get the product details based on the productId
     let product;
     for (let i = 0; i < productList.length; i++) {
-        if (productList[i].id === productId) {
-            product = productList[i];
+        for (let p = 0; p < productList[i].products.length; p++) {
+            if (productList[i].products[p].id === productId) {
+                product = productList[i].products[p];
+                break;
+            }
+        }
+        if (product) {
             break;
         }
-    }
-
-    // if product is not found
-    if (!product) {
-        return;
     }
 
     // get the basket items from the local storage
