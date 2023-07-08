@@ -314,11 +314,12 @@ function decreaseQuantity(productId) {
         const item = basketItems[i];
 
         if (item.id === productId) {
-            item.quantity--;
-        } else {
-            continue;
+            if (item.quantity > 1) {
+                item.quantity--;
+            } else {
+                continue;
+            }
         }
-
         updatedBasketItems.push(item);
     }
 
