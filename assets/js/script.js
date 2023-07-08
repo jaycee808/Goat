@@ -242,25 +242,22 @@ function displayShoppingCart() {
             });
     }
 
-    // add event listeners to the increase button to increase the quantity of product
+
+    // add event listeners to the increase and decrease buttons
     const increaseButtons = document.getElementsByClassName('cart-item-increase-btn');
-        for (let i = 0; i < increaseButtons.length; i++) {
-            increaseButtons[i].addEventListener('click', function () {
-                const amountElement = this.parentNode.querySelector('.cart-item-amount');
-                const quantity = parseInt(amountElement.textContent);
-                amountElement.textContent = quantity + 1;
-            });
+    const decreaseButtons = document.getElementsByClassName('cart-item-decrease-btn');
+
+    for (let i = 0; i < increaseButtons.length; i++) {
+        increaseButtons[i].addEventListener('click', function () {
+            const productId = this.closest('.cart-item').getAttribute('data-id');
+            increaseQuantity(productId);
+        });
     }
 
-    // add event listeners to the decrease button to decrease the quantity of product
-    const decreaseButtons = document.getElementsByClassName('cart-item-decrease-btn');
     for (let i = 0; i < decreaseButtons.length; i++) {
         decreaseButtons[i].addEventListener('click', function () {
-            const amountElement = this.parentNode.querySelector('.cart-item-amount');
-            const quantity = parseInt(amountElement.textContent);
-            if (quantity > 1) {
-                amountElement.textContent = quantity - 1;
-            }
+            const productId = this.closest('.cart-item').getAttribute('data-id');
+            decreaseQuantity(productId);
         });
     }
 }
@@ -286,6 +283,16 @@ function removeCartItem(itemId) {
         // update the price of the shopping cart when an item is removed
         updateTotalPrice();
     }
+}
+
+// Function to increase quantity of an item in the shopping cart
+function increaseQuantity(productId) {
+
+}
+
+// Function to decrease quantity of an item in the shopping cart
+function increaseQuantity(productId) {
+
 }
 
 // Function to calculate total price of the basket
