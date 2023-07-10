@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Bacasime+Antique&family=Lexend+Peta:wght@300;400;600;700&family=Lexend:wght@300;400;700&family=Lora:ital,wght@0,400;0,500;1,400;1,500&family=Poppins:ital,wght@0,100;0,500;0,800;0,900;1,600&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Peta:wght@300;400;600;700&family=Lexend:wght@300;400;700&family=Lora:ital,wght@0,400;0,500;1,400;1,500&display=swap');
 * {
     margin: 0;
     padding: 0;
@@ -37,7 +36,7 @@ h4 {
 }
 
 p {
-    font-family: "Bacasime Antique", serif;
+    font-family: "Lora", serif;
     font-size: 1.4rem;
 }
 
