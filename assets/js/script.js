@@ -164,12 +164,16 @@ function displayProducts() {
     
     productHTML += `
         <div class="product-display">
-            <h3 class="product-title">${product.name.toUpperCase()}</h3>
+            <div class="column">
             <img src="${product.image}" alt="${product.name}" />
+            </div>
+            <div class="column">
+            <h3 class="product-title">${product.name.toUpperCase()}</h3>
             <p class="product-description">${product.description}</p>
             <p class="product-price">Price: £${product.price}</p>
             <button class="addToBasketBtn" data-id="${product.id}">Add to Basket</button>
             </div>
+        </div>
         `;
     }
 }
