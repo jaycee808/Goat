@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function () {
 // product lists //
 let productList = [
     {
-        category: "cleanser",
+        category: "cleansers",
         products: [
             {
                 id: "c1",
@@ -45,7 +45,7 @@ let productList = [
         ],
     },
     {
-        category: "exfoliator",
+        category: "exfoliators",
         products: [
             {
             id: "e1",
@@ -71,7 +71,7 @@ let productList = [
         ],
     },
     {
-        category: "moisturiser",
+        category: "moisturisers",
         products: [
             {
             id: "m1",
@@ -157,17 +157,17 @@ function displayProducts() {
         
         const category = productList[i];
 
-    productHTML += `<h2>${category.category.toUpperCase()}</h2>`;
+    productHTML += `<h2 class="product-category">${category.category.toUpperCase()}</h2>`;
         for (let p = 0; p < category.products.length; p++) {
         
         const product = category.products[p];
     
     productHTML += `
-        <div>
-            <h3>${product.name.toUpperCase()}</h3>
-            <p>Price: £${product.price}</p>
-            <p>Description: ${product.description}</p>
+        <div class="product-display">
+            <h3 class="product-title">${product.name.toUpperCase()}</h3>
             <img src="${product.image}" alt="${product.name}" />
+            <p class="product-description">${product.description}</p>
+            <p class="product-price">Price: £${product.price}</p>
             <button class="addToBasketBtn" data-id="${product.id}">Add to Basket</button>
             </div>
         `;

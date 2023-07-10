@@ -1,12 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend+Peta:wght@300;400;600;700&family=Lexend:wght@300;400;700&family=Lora:ital,wght@0,400;0,500;1,400;1,500&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* 
+color hex code : mid grey #5F6673 / mid blue #2B3D5B
+*/
+
 body {
-    line-height: 1.5;
+    line-height: 1.2;
+    background-image: url("../images/background-one.jpg");
+    background-size: cover;
+    /* background-position: center center; */
+    background-attachment: fixed;
 }
 
 ul {
@@ -38,6 +47,7 @@ h4 {
 p {
     font-family: "Lora", serif;
     font-size: 1.4rem;
+    color: #E6E3DF;
 }
 
 /* Navigation bar styles */
@@ -58,6 +68,8 @@ p {
     text-align: center;
     margin: auto;
     font-family: "Lexend Peta", sans-serif;
+    /* color: #CECAC8; */
+    color: #E6E3DF;
 }
 
 .logo-link {
@@ -66,8 +78,8 @@ p {
 }
 
 .shopping-cart {
-    position: fixed;
-    top: 1.2rem;
+    position: absolute;
+    top: 1rem;
     right: 1rem;
     align-content: flex-end;
     width: 4rem;
@@ -81,14 +93,16 @@ p {
 .menu-links {
     display: flex;
     justify-content: center;
-    align-items: center;
-    padding: 1rem 0;
+    padding: 0.5rem 4rem;
+    margin: 0.5rem;
     font-family: "Lexend Peta", sans-serif;
     text-transform: uppercase;
+    border: 2px solid #E6E3DF;
+    border-radius: 2px;
 }
 
 .nav-link {
-    color: #000;
+    color: #E6E3DF;
     margin-right: 1.5rem;
     font-size: 1.25rem;
 }
@@ -98,6 +112,7 @@ p {
     border-color: transparent;
     font-size: 1.6rem;
     cursor: pointer;
+    color: #E6E3DF;
 }
 
 /* Shopping Cart Styles */
@@ -227,6 +242,7 @@ p {
 .category-heading {
     font-family: "Lexend Peta", sans-serif;
     text-transform: uppercase;
+    color: #E6E3DF;
 }
 
 /* home page styles */
@@ -244,8 +260,41 @@ p {
 
 /* product styles */
 
+.product-display {
+    border: 1px solid #E6E3DF;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    width: 350px;
+    margin: 12px;
+    border-radius: 2px;
+    background: #0f1021;
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+}
+
+img {
+    width: 300px;
+}
+
+.product-category {
+    color: #E6E3DF;
+    margin: 0.5rem;
+}
+
+.product-title {
+    color: #E6E3DF;
+    text-align: center;
+    margin: 0.2rem;
+}
+
+.product-price {
+    color: #E6E3DF;
+}
+.product-description {
+    color: #E6E3DF;
+}
+
 .addToBasketBtn {
-    background: #FFF;
+    background: #E6E3DF;
     padding: 0.5rem;
     border-radius: 6px;
     border: 1px solid #000;
@@ -253,9 +302,4 @@ p {
     cursor: pointer;
     font-family: "Lexend Peta", sans-serif;
     text-transform: uppercase;
-}
-
-img {
-    width: 100%;
-    display: block;
 }
