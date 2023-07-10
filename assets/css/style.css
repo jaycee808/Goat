@@ -255,3 +255,8 @@ p {
     font-family: "Lexend Peta", sans-serif;
     text-transform: uppercase;
 }
+
+img {
+    width: 100%;
+    display: block;
+}
