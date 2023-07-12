@@ -288,7 +288,7 @@ p {
     max-width: 750px;
     padding: 50px 30px 50px 20px;
     margin-bottom: 1rem;
-    border: 2px solid #E7D7BE;
+    border: 1px solid #E7D7BE;
     border-radius: 2px;
     border-radius: 2px;
     background-image: url("../images/background-one.jpg");
@@ -302,7 +302,7 @@ img {
     margin-left: -60px;
     margin-right: 30px;
     box-shadow: 0 60px 40px rgb(0 0 0 / 8%);
-    border: 2px solid #E7D7BE;
+    border: 1px solid #E7D7BE;
 }
 
 .product-category {
@@ -377,11 +377,14 @@ img {
 
 /* footer styles */
 
-footer {
+.page-footer {
+    margin-top: 3rem;
     text-align: center;
     text-transform: uppercase;
     position: fixed;
     width: 100%;
-    left: 0;
     bottom: 0;
+    background-color: #0F1021;
+    border-top: 1px solid #E7D7BE;
+    z-index: 1;
 }
