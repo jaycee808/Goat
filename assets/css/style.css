@@ -12,10 +12,13 @@ color hex code : mid grey #5F6673 / mid blue #2B3D5B
 
 body {
     line-height: 1.2;
-    background-image: url("../images/background-one.jpg");
-    background-size: cover;
-    /* background-position: center center; */
-    background-attachment: fixed;
+    background: #0F1021;
+}
+
+.homepage-banner {
+    background-image: url("../images/bg-top.jpg");
+    background-position: center;
+    height: 300px;
 }
 
 ul {
@@ -68,7 +71,6 @@ p {
     text-align: center;
     margin: auto;
     font-family: "Lexend Peta", sans-serif;
-    /* color: #CECAC8; */
     color: #E6E3DF;
 }
 
@@ -92,19 +94,22 @@ p {
 
 .menu-links {
     display: flex;
-    justify-content: center;
-    padding: 0.5rem 4rem;
+    padding: 0.5rem 1rem;
     margin: 0.5rem;
     font-family: "Lexend Peta", sans-serif;
     text-transform: uppercase;
     border: 2px solid #E6E3DF;
     border-radius: 2px;
+    line-height: 1.2;
+    background-image: url("../images/background-one.jpg");
+
+    /* background-position: center center; */
 }
 
 .nav-link {
     color: #E6E3DF;
-    margin-right: 1.5rem;
     font-size: 1.25rem;
+    margin: 0.5rem;
 }
 
 .toggle-cart {
