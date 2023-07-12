@@ -125,7 +125,7 @@ let productList = [
             name: "redwood dusk",
             price: "55",
             description: "Experience the tranquillity of a serene forest at twilight with Redwood Dusk. This fragrance captures the beauty of nature as the sun sets. The top note evokes the freshness of bergamot, while the heart reveals the soothing aroma of lavender. Finally, the base note develops a warm fusion of redwood and cedarwood. Redwood Dusk is a sophisticated and earthy fragrance that brings to life the aromatic richness of the wilderness.",
-            image: "./assets/images/redwood-dusk-fragrance.jpg",
+            image: "./assets/images/redwood-dusk-fragrance-two.jpg",
             },
             {
             id: "f5",
