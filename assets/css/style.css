@@ -242,7 +242,6 @@ p {
     width: fit-content;
 }
 
-
 .cart-item-remove-btn {
     font-family: "Lexend Peta", sans-serif;
     text-transform: uppercase;
@@ -343,6 +342,7 @@ img {
 
 .product-title {
     color: #E6E3DF;
+    background: #0F1021;
     display: flex;
     justify-content: center;
     padding: 0.5rem;

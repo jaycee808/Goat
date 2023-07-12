@@ -266,7 +266,7 @@ function displayShoppingCart() {
                     <p class="cart-item-price">£${item.price}</p>
                     
                 </div>
-                <div class="cart-buttons"> 
+                <div class="cart-buttons">
                     <button class="cart-item-increase-btn">
                         <i class="fa-solid fa-plus"></i>
                     </button>
