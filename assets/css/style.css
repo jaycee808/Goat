@@ -374,3 +374,14 @@ img {
         font-family: "Lexend Peta", sans-serif;
     }
 }
+
+/* footer styles */
+
+footer {
+    text-align: center;
+    text-transform: uppercase;
+    position: fixed;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+}
