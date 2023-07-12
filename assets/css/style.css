@@ -123,21 +123,20 @@ p {
     width: 100%;
     height: 100%;
     color: #FFF;
+    z-index: 10;
 }
 
 .cart {
-    /* background: #0F1021; */
-    background-image: url("../images/background-one.jpg");
-    background-position: center center;
-    background-size: cover;
+    background: #0F1021;
     position: fixed;
     top: 0;
     right: 0;
-    width: 100%;
+    width: 40%;
     height: 100%;
     padding: 3rem;
     display: grid;
     transform: translateX(100%);
+    border-left: 1px solid #E7D7BE;
 }
 
 .show .cart {
@@ -175,14 +174,15 @@ p {
 }
 
 .cart-checkout-btn {
-    background: #FFF;
-    padding: 0.5rem;
-    border-radius: 6px;
-    border: transparent;
-    color: #000;
-    cursor: pointer;
     font-family: "Lexend Peta", sans-serif;
     text-transform: uppercase;
+    color: #E6E3DF;
+    padding: 0.5rem;
+    margin: auto;
+    border: 2px solid #E7D7BE;
+    border-radius: 2px;
+    background: #0F1021;
+    width: fit-content;
 }
 
 /* cart item */
@@ -190,14 +190,28 @@ p {
 .cart-title {
     font-family: "Lexend Peta", sans-serif;
     text-transform: uppercase;
+    color: #E6E3DF;
+    border: 2px solid #E7D7BE;
+    border-radius: 2px;
+    width: fit-content;
+    margin: auto;
+    padding: 0.5rem;
 }
 
 .cart-item {
-    margin: 1rem 0;
     display: grid;
-    grid-template-columns: auto 1fr auto;
-    column-gap: 1.5rem;
+    margin: 1rem 0;
     align-items: center;
+    /* border: 1px solid #E7D7BE;
+    border-radius: 2px; */
+    padding: 0.5rem;
+}
+
+.cart-item-category {
+    font-size: 0.8em;
+    border-top: 1px solid #E7D7BE;
+    border-bottom: 1px solid #E7D7BE;
+    padding: 0.5rem 0;
 }
 
 .cart-item-name {
@@ -213,20 +227,38 @@ p {
     font-family: "Cormorant Garamond", serif;
 }
 
-.cart-item-remove-btn {
-    background: #FFF;
-    padding: 0.5rem;
-    border-radius: 6px;
-    border: transparent;
-    color: #000;
-    cursor: pointer;
+.cart-buttons {
+    display: flex;
+}
+
+.cart-item-increase-btn, 
+.cart-item-decrease-btn {
     font-family: "Lexend Peta", sans-serif;
     text-transform: uppercase;
+    color: #E6E3DF;
+    padding: 0.5rem;
+    margin: auto;
+    border: 2px solid #E7D7BE;
+    border-radius: 2px;
+    background: #0F1021;
+    width: fit-content;
+}
+
+
+.cart-item-remove-btn {
+    font-family: "Lexend Peta", sans-serif;
+    text-transform: uppercase;
+    color: #E6E3DF;
+    padding: 0.5rem;
+    margin: auto;
+    border: 2px solid #E7D7BE;
+    border-radius: 2px;
+    background: #0F1021;
+    width: fit-content;
 }
 
 .cart-item-amount {
     margin-bottom: 0;
-    text-align: center;
 }
 
 .cart-item-increase-btn,

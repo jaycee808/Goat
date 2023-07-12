@@ -245,15 +245,28 @@ function displayShoppingCart() {
     for (let i = 0; i < basketItems.length; i++) {
         const item = basketItems[i];
 
+        // Find the category and product based on the item's ID
+        let category, product;
+        for (let c = 0; c < productList.length; c++) {
+            const currentCategory = productList[c];
+            const foundProduct = currentCategory.products.find(p => p.id === item.id);
+            if (foundProduct) {
+                category = currentCategory;
+                product = foundProduct;
+                break;
+            }
+        }
+
         // display the items information in html
         cartItemsHTML += `
             <article class="cart-item" data-id="${item.id}">
                 <div>
                     <h4 class="cart-item-name">${item.name.toUpperCase()}</h4>
+                    <h3 class="cart-item-category">${category.category.toUpperCase().slice(0,-1)}</h3>
                     <p class="cart-item-price">£${item.price}</p>
-                    <button class="cart-item-remove-btn">Remove</button>
+                    
                 </div>
-                <div>
+                <div class="cart-buttons"> 
                     <button class="cart-item-increase-btn">
                         <i class="fa-solid fa-plus"></i>
                     </button>
@@ -261,6 +274,7 @@ function displayShoppingCart() {
                     <button class="cart-item-decrease-btn">
                         <i class="fa-solid fa-minus"></i>
                     </button>
+                    <button class="cart-item-remove-btn">Remove</button>
                 </div>
             </article>
         `;
@@ -270,13 +284,12 @@ function displayShoppingCart() {
 
     // add event listeners to the remove buttons
     const removeButtons = document.getElementsByClassName('cart-item-remove-btn');
-        for (let i = 0; i < removeButtons.length; i++) {
-            removeButtons[i].addEventListener('click', function () {
-                const itemId = this.parentNode.parentNode.getAttribute('data-id');
-                removeCartItem(itemId);
-            });
+    for (let i = 0; i < removeButtons.length; i++) {
+        removeButtons[i].addEventListener('click', function () {
+            const itemId = this.parentNode.parentNode.getAttribute('data-id');
+            removeCartItem(itemId);
+        });
     }
-
 
     // add event listeners to the increase and decrease buttons
     const increaseButtons = document.getElementsByClassName('cart-item-increase-btn');
@@ -296,6 +309,7 @@ function displayShoppingCart() {
         });
     }
 }
+
 
 // Function to remove product from the basket
 function removeCartItem(itemId) {
@@ -389,4 +403,3 @@ function updateTotalPrice() {
 
 updateTotalPrice();
 displayProducts();
-
