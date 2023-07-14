@@ -180,6 +180,10 @@ p {
     border: 2px solid #E7D7BE;
     border-radius: 2px;
     background: #0F1021;
+    display: flex;
+    margin-top: 1.5rem;
+    margin-left: auto;
+    margin-right: auto;
     width: fit-content;
 }
 
