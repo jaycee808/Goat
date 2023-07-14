@@ -25,7 +25,7 @@ let productList = [
                 id: "c1",
                 name: "wildwood",
                 price: "12",
-                description: "This refreshing blend delicately removing impurities while nourishing your skin. Infused with botanical extracts like aloe-vera, green tea, and chamomile, Wildwood provides a gentle and soothing cleanse, leaving your skin feeling revitalised and balanced.",
+                description: "This refreshing blend delicately removes impurities while nourishing your skin. Infused with botanical extracts like aloe-vera, green tea, and chamomile, Wildwood provides a gentle and soothing cleanse, leaving your skin feeling revitalised and balanced.",
                 image: "./assets/images/wildwood-cleanser.jpg",
             },
             {
