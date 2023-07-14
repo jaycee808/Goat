@@ -395,10 +395,10 @@ img {
 
 /* contact page style */
 
-.contact-page {
+.contact-page,
+.about-page {
     display: grid;
     font-family: "Lexend Peta", sans-serif;
-    border-top: 1px solid #E7D7BE;
     border-radius: 1px;
     background-image: url("../images/background-one.jpg");
     background-position: center;
@@ -406,7 +406,8 @@ img {
     margin-top: -2rem;
 }
 
-.category-heading-contact {
+.category-heading-contact,
+.category-heading-about {
     font-family: "Lexend Peta", sans-serif;
     text-transform: uppercase;
     color: #E6E3DF;
@@ -425,7 +426,7 @@ img {
     border: 1px solid #E7D7BE;
     width: fit-content;
     margin: auto;
-    background: #0F1021;
+    background: rgba(15, 16, 33, 0.7); 
     margin-bottom: 4rem;
 }
 
@@ -448,6 +449,16 @@ img {
     text-align: center;
     text-transform: uppercase;
     margin: 2rem;
+}
+
+.about-content {
+    color: #E6E3DF;
+    margin: 1.5rem;
+    padding: 0.5rem;
+    border: 1px solid #E7D7BE;
+    width: fit-content;
+    background: rgba(15, 16, 33, 0.7); 
+    margin-bottom: 4rem;
 }
 
 /* footer styles */
