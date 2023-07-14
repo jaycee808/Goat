@@ -133,6 +133,18 @@ p {
     display: grid;
     transform: translateX(100%);
     border-left: 1px solid #E7D7BE;
+    overflow-y: scroll;
+}
+
+/* custom scrollbar  for shopping cart */
+
+.cart::-webkit-scrollbar {
+    background-color: #E6E3DF;
+    width: 12px;
+}
+
+.cart::-webkit-scrollbar-thumb {
+	background-color: #0F1021;
 }
 
 .show .cart {
