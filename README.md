@@ -7,7 +7,7 @@ I created and designed Goat, a website dedicated to men's skincare and fragrance
 ## Screenshot
 
 <p align="center">
-  <img src="/assets/images/goat-screenshot.jpg" width="350" title="screenshot of application">
+  <img src="/assets/images/goat-screenshot.jpg" width="380" title="screenshot of application">
 </p>
 
 ## Link to deployed site
@@ -16,6 +16,6 @@ https://goat-store.netlify.app/
 
 ## Technologies Used
 
-JavaScript
-HTML
-CSS
+- JavaScript
+- HTML
+- CSS
