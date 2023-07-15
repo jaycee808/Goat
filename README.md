@@ -7,7 +7,7 @@ I designed and developed Goat, a website dedicated to men's skincare and fragran
 ## Screenshot
 
 <p align="center">
-  <img src="/assets/images/goat-screenshot.jpg" width="450" height="auto" title="screenshot of application">
+  <img src="/assets/images/goat-screenshot.jpg" width="1000" height="auto" title="screenshot of application">
 </p>
 
 ## Link to deployed site
