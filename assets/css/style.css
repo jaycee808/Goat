@@ -467,9 +467,8 @@ img {
     color: #E6E3DF;
     margin: 1.5rem;
     padding: 0.5rem;
-    border: 1px solid #E7D7BE;
     width: fit-content;
-    background: rgba(15, 16, 33, 0.7); 
+    background: rgba(15, 16, 33, 0.8); 
     margin-bottom: 4rem;
 }
 
