@@ -1,8 +1,5 @@
 /* Event Listener to toggle navigation menu */ 
 document.addEventListener('DOMContentLoaded', function () {
-    const menuToggle = document.querySelector('.menu-toggle');
-    const menuLinks = document.querySelector('.menu-links');
-    const menuCloseBtn = document.querySelector('.menu-close-btn');
     const cartToggle = document.querySelector('.toggle-cart');
     const cartOverlay = document.querySelector('.cart-overlay');
 
