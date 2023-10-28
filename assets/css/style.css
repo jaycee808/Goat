@@ -6,10 +6,6 @@
     box-sizing: border-box;
 }
 
-/* 
-color hex code : mid grey #5F6673 / mid blue #2B3D5B
-*/
-
 body {
     line-height: 1.2;
     background: #0F1021;
@@ -94,8 +90,28 @@ p {
     text-transform: uppercase;
     border: 2px solid #E7D7BE;
     border-radius: 2px;
-    line-height: 1.2;
+    line-height: 1.4;
     background-image: url("../images/background-one.jpg");
+    position: relative;
+}
+
+.menu-links li {
+    position: relative;
+}
+
+.menu-links li::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px; 
+    background-color: #E7D7BE;
+    bottom: 0;
+    left: 0;
+    transition: width 0.3s;
+}
+
+.menu-links li:hover::before {
+    width: 100%;
 }
 
 .nav-link {
