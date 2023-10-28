@@ -179,12 +179,25 @@ function displayProducts() {
 
     // add event listeners to the "Add to Basket" buttons
     const addToBasketBtns = document.getElementsByClassName('addToBasketBtn');
-        for (let i = 0; i < addToBasketBtns.length; i++) {
-            addToBasketBtns[i].addEventListener('click', function () {
+
+    for (let i = 0; i < addToBasketBtns.length; i++) {
+        addToBasketBtns[i].addEventListener('click', function () {
             const productId = this.getAttribute('data-id');
             addToBasket(productId);
+    
+            // Create a new HTML element to display 'Added to basket'
+            const addedToBasketElement = document.createElement('div');
+            addedToBasketElement.textContent = 'Added to basket';
+            addedToBasketElement.className = 'addedToBasket';
+            this.parentNode.appendChild(addedToBasketElement);
+    
+            // Remove the 'Added to basket' message after a delay
+            setTimeout(function () {
+                addedToBasketElement.remove();
+            }, 1500);
         });
     }
+    
 }
 
 // Function to add product to the basket

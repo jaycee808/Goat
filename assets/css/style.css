@@ -424,6 +424,16 @@ img {
     color: #0F1021;
 }
 
+.addedToBasket {
+    font-size: 0.8em;
+    border-top: 1px solid #E7D7BE;
+    border-bottom: 1px solid #E7D7BE;
+    padding: 0.5rem 0;
+    color: #E6E3DF;
+    font-family: "Lexend Peta", sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+}
 
 
 /* contact page style */
