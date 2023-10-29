@@ -360,7 +360,6 @@ p {
 
 /* product styles */
 
-
 .shop {
     display: flex;
     align-items: center;
@@ -371,7 +370,6 @@ p {
 .product-display {
     display: flex;
     align-items: center;
-    width: 75vw;
     max-width: 750px;
     padding: 50px 30px 50px 20px;
     margin-bottom: 1rem;
@@ -379,6 +377,18 @@ p {
     border-radius: 2px;
     border-radius: 2px;
     background-image: url("../images/background-one.jpg");
+}
+
+.product-category {
+    color: #E6E3DF;
+    margin: 1rem 0;
+    text-align: center;
+    border: 2px solid #E7D7BE;
+    padding: 0.5rem 0;
+    font-family: "Lexend Peta", sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    max-width: 750px;
 }
 
 img {
@@ -389,12 +399,6 @@ img {
     margin-right: 30px;
     box-shadow: 0 60px 40px rgb(0 0 0 / 8%);
     border: 1px solid #E7D7BE;
-}
-
-.product-category {
-    color: #E6E3DF;
-    margin: 1rem;
-    text-align: center;
 }
 
 .product-title {
@@ -416,7 +420,6 @@ img {
 
 .product-description {
     color: #E6E3DF;
-
     font-weight: 400;
     margin: 0.5rem;
     margin-bottom: 24px;
@@ -450,7 +453,6 @@ img {
     text-transform: uppercase;
     text-align: center;
 }
-
 
 /* contact page style */
 
@@ -542,7 +544,7 @@ img {
         width: 320px;
         flex-direction: column;
     }
-    
+
     img {
         margin: -100px 0 30px 0;
         width: 100%;
