@@ -479,9 +479,8 @@ img {
 
 .contact-box {
     font-family: "Lexend Peta", sans-serif;
-    text-transform: uppercase;
     color: #E6E3DF;
-    text-align: center;
+    text-align: left;
     padding: 0.5rem;
     border: 1px solid #E7D7BE;
     width: fit-content;
@@ -494,21 +493,17 @@ img {
     font-family: "Lexend Peta", sans-serif;
     text-transform: uppercase;
     color: #E6E3DF;
-    margin: 0.5rem;
-    text-align: center;
-    padding: 0.5rem;
+    text-align: left;
     border-bottom: 1px solid #E7D7BE;
-    width: fit-content;
-    margin: auto;
 }
 
 .contact-details {
     font-family: "Cormorant Garamond", serif;
     color: #E6E3DF;
     font-size: 2rem;
-    text-align: center;
-    text-transform: uppercase;
-    margin: 2rem;
+    text-align: left;
+    padding: 0.5rem;
+    margin-top: 1rem;
 }
 
 .about-content {
@@ -617,7 +612,7 @@ img {
     }
 
     .contact-box {
-        text-align: center;
+        text-align: left;
         padding: 0.1rem;
         width: fit-content;
         margin: auto;
