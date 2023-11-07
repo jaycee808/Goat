@@ -321,7 +321,7 @@ p {
 .homepage-banner {
     background-image: url("../images/bg-top.jpg");
     background-position: center;
-    height: 260px;
+    height: 220px;
     margin-top: -2rem;
 }
 
@@ -489,12 +489,13 @@ img {
     font-family: "Lexend Peta", sans-serif;
     color: #E6E3DF;
     text-align: left;
-    padding: 1rem;
+    padding: 0.5rem 1rem;
     border: 1px solid #E7D7BE;
     width: 380px;
     margin: auto;
     background: rgba(15, 16, 33, 0.7); 
-    margin-bottom: 4rem;
+    margin-bottom: 6rem;
+    margin-top: 4rem;
 }
 
 .contact-heading {
