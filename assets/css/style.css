@@ -456,12 +456,20 @@ img {
 
 /* contact page style */
 
-.contact-page,
-.about-page {
+.contact-page {
     display: grid;
     font-family: "Lexend Peta", sans-serif;
     border-radius: 1px;
     background-image: url("../images/background-one.jpg");
+    background-position: center;
+    background-size: cover;
+    margin-top: -2rem;
+}
+
+.about-page {
+    display: grid;
+    font-family: "Lexend Peta", sans-serif;
+    border-radius: 1px;
     background-position: center;
     background-size: cover;
     margin-top: -2rem;
@@ -473,7 +481,7 @@ img {
     text-transform: uppercase;
     color: #E6E3DF;
     margin: 0.5rem;
-    margin-top: 2rem;
+    margin-top: 3rem;
     text-align: center;
 }
 
@@ -481,9 +489,9 @@ img {
     font-family: "Lexend Peta", sans-serif;
     color: #E6E3DF;
     text-align: left;
-    padding: 0.5rem;
+    padding: 1rem;
     border: 1px solid #E7D7BE;
-    width: fit-content;
+    width: 380px;
     margin: auto;
     background: rgba(15, 16, 33, 0.7); 
     margin-bottom: 4rem;
@@ -495,6 +503,7 @@ img {
     color: #E6E3DF;
     text-align: left;
     border-bottom: 1px solid #E7D7BE;
+    margin-bottom: 0.75rem;
 }
 
 .contact-details {
@@ -502,15 +511,13 @@ img {
     color: #E6E3DF;
     font-size: 2rem;
     text-align: left;
-    padding: 0.5rem;
     margin-top: 1rem;
 }
 
 .about-content {
     color: #E6E3DF;
-    margin: 1.5rem;
+    margin: 0.5rem;
     padding: 0.5rem;
-    width: fit-content;
     background: rgba(15, 16, 33, 0.8); 
     margin-bottom: 4rem;
 }
@@ -614,7 +621,7 @@ img {
     .contact-box {
         text-align: left;
         padding: 0.1rem;
-        width: fit-content;
+        width: 320px;
         margin: auto;
     }
     
