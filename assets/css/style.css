@@ -490,9 +490,10 @@ img {
     color: #E6E3DF;
     text-align: left;
     padding: 0.5rem 1rem;
-    border: 1px solid #E7D7BE;
+    /* border: 1px solid #E7D7BE; */
     width: 380px;
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
     background: rgba(15, 16, 33, 0.7); 
     margin-bottom: 6rem;
     margin-top: 4rem;
@@ -620,10 +621,10 @@ img {
     }
 
     .contact-box {
-        padding: 1rem;
+        padding: 0.5rem 1rem;
         width: 300px;
-        margin: auto;
+        margin-left: auto;
+        margin-right: auto;
     }
-    
 }
 
