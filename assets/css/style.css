@@ -321,7 +321,7 @@ p {
 .homepage-banner {
     background-image: url("../images/bg-top.jpg");
     background-position: center;
-    height: 280px;
+    height: 260px;
     margin-top: -2rem;
 }
 
@@ -619,9 +619,8 @@ img {
     }
 
     .contact-box {
-        text-align: left;
-        padding: 0.1rem;
-        width: 320px;
+        padding: 1rem;
+        width: 300px;
         margin: auto;
     }
     
